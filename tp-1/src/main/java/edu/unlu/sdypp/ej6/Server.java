@@ -7,36 +7,53 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.logging.Level;
 
-public class Server {
+public class Server extends Thread{
 
-    public static final int LISTEN_PORT = 8000;
     public static final String SERVICE_NAME = "ArrayServices";
-    private static Logger logger;
+    private static Logger logger = (Logger) LoggerFactory.getLogger(Server.class);
+    
+    private Registry rmiServer;
+    private Implementation implementation;
+    private Services service;
+    private int port;
+    private boolean interruptFlag = false;
+    
+    public Server(int port) {
+    	this.port = port;
+    }
 
-    public static void main( String[] args ) {
-        logger = (Logger) LoggerFactory.getLogger(Server.class);
-
-        try {
-            // Creo el servidor. Abro un socket que escucha en ese puerto
-            Registry serverRMI = LocateRegistry.createRegistry(LISTEN_PORT);
-
+	public void run() {
+		try {
+			
+			// Creo el servidor. Abro un socket que escucha en ese puerto
+            this.rmiServer = LocateRegistry.createRegistry(this.port);
+            
             // Creo la implementacion. El motor de procesamiento.
-            Implementation implementation = new Implementation();
+            this.implementation = new Implementation();
 
             // Exporto la implementaion como un servicio para que los clientes la consuman
-            Services service = (Services) UnicastRemoteObject.exportObject(implementation, LISTEN_PORT);
+            this.service = (Services) UnicastRemoteObject.exportObject(implementation, port);
 
             // Vinculo el servicio con un nombre amigable para el cliente que lo consume
-            serverRMI.rebind(SERVICE_NAME, service);
+            this.rmiServer.rebind(SERVICE_NAME, service);
 
-//            logger.info(String.format("Servicio \"%s\" iniciado en el puerto %s.", SERVICE_NAME, LISTEN_PORT));
-            logger.info("Servicio \"{}\" iniciado en el puerto {}.", SERVICE_NAME, LISTEN_PORT);
-
+            logger.info("Servicio \"{}\" iniciado en el puerto {}.", SERVICE_NAME, port);
+            
+            while (!this.interruptFlag) {
+            	Thread.sleep(1000);
+            }
+            System.exit(0);
+            
         } catch (RemoteException e) {
             logger.error("Server error: " + e);
+        } catch (InterruptedException e) {
+        	logger.warn("Interruption: ", e);
         }
-    }
+	}
+	
+	public void interruptService() {
+		this.interruptFlag = true;
+	}
 
 }
