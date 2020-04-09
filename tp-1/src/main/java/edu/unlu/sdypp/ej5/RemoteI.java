@@ -4,6 +4,6 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 	public interface RemoteI extends Remote{
-		public String getClima() throws RemoteException;
+		public String getClimaS() throws RemoteException;
 		
 }

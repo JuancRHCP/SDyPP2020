@@ -14,7 +14,7 @@ public class Server{
 		
 		try {
 			Implementer s= new Implementer();
-			System.out.println(" --- El implementador fue instanciado --- ");
+			System.out.println(" -- El implementador fue instanciado -- ");
 			
 			Registry server = LocateRegistry.createRegistry(90);
 			System.out.println(" --- El Servicio RMI fue iniciado --- ");

@@ -21,9 +21,9 @@ public class ClientR {
 			    System.out.println(" --- El Cliente está conectado --- ");
 				
 				RemoteI r = (RemoteI) crmi.lookup("Info_del_clima");
-				String Info_del_clima = r.getClima();
+				String Info_del_clima = r.getClimaS();
 				System.out.println(" --- El Clima en la región del servidor es: " + Info_del_clima);
-				System.out.println(" -------------- F I N A L I Z A D O --------------- ");
+				System.out.println(" ------------- F I N A L I Z A D O --------------- ");
 				
 				
 			} catch (RemoteException e) {
