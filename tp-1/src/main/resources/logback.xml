@@ -5,11 +5,27 @@
         </encoder>
     </appender>
 
+    <property name="LOG_DIR" value="/logs" />
+
+    <appender name="ROOT_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR}/root.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>root.%d{yyyy-MM-dd}.gz</fileNamePattern>
+
+            <!-- keep 30 days' worth of history capped at 3GB total size -->
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>3GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
     <root level="debug">
         <appender-ref ref="STDOUT" />
+        <appender-ref ref="ROOT_LOG" />
     </root>
-
-    <property name="LOG_DIR" value="/logs" />
 
     <appender name="SERVER_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_DIR}/server.log</file>
@@ -29,6 +45,9 @@
     <logger name="edu.unlu.sdypp.ej6.Server" level="INFO">
         <appender-ref ref="SERVER_LOG" />
     </logger>
+    <logger name="edu.unlu.sdypp.ej7.compute.Server" level="INFO">
+        <appender-ref ref="SERVER_LOG" />
+    </logger>
 
     <appender name="CLIENT_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_DIR}/client.log</file>
@@ -46,6 +65,9 @@
         </rollingPolicy>
     </appender>
     <logger name="edu.unlu.sdypp.ej6.Client" level="INFO">
+        <appender-ref ref="CLIENT_LOG" />
+    </logger>
+    <logger name="edu.unlu.sdypp.ej7.client.Client" level="INFO">
         <appender-ref ref="CLIENT_LOG" />
     </logger>
 </configuration>
