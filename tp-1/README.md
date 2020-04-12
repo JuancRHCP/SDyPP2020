@@ -2,4 +2,4 @@
 
 ## TP-1
 
-* Informe: [/docs/Informe-de-Practica-1.docx](/docs/Informe-de-Practica-1.docx)
+* Informe: [Informe-de-Practica-1.docx](Informe-de-Practica-1.docx)
