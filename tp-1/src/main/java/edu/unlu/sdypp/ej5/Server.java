@@ -19,10 +19,10 @@ public class Server{
 			Registry server = LocateRegistry.createRegistry(90);
 			System.out.println(" --- El Servicio RMI fue iniciado --- ");
 			
-			RemoteI ServiClima = (RemoteI) UnicastRemoteObject.exportObject(s, 9000);
+			RemoteI ServerClima = (RemoteI) UnicastRemoteObject.exportObject(s, 9000);
 			System.out.println(" --- El servicio del clima fue asociado a un puerto --- ");
 			
-			server.rebind("Info_del_clima", ServiClima);
+			server.rebind("Info_del_clima", ServerClima);
 			System.out.println(" ---El bind de servicio JNDI fue realizado --- ");
 	
 		} catch (RemoteException e) {
