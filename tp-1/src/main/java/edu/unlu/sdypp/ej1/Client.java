@@ -1,8 +1,5 @@
 package edu.unlu.sdypp.ej1;
 
-
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Logger;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,8 +9,6 @@ import java.net.UnknownHostException;
 import java.util.Scanner;
 
 public class Client {
-		
-static final Logger log = Logger.getLogger(Client.class);
 		
 		public Client(String ip, int port) {
 			try {
