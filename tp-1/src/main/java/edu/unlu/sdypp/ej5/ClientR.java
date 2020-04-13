@@ -4,12 +4,6 @@ import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.util.Scanner;
-
-import org.apache.log4j.BasicConfigurator;
-import org.apache.log4j.Logger;
-
-import edu.unlu.sdypp.ej1.Client;
 
 public class ClientR {
 		
