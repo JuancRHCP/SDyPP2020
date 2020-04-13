@@ -6,17 +6,17 @@ import java.util.ArrayList;
 public class Implementer implements RemoteI{
 
 		
-		public String getClimaS() throws RemoteException {
+		public String getClimaServ() throws RemoteException {
 			
-			ArrayList<String> lista_clima = new ArrayList<String>();
-	        lista_clima.add("Soleado"); 
-	        lista_clima.add("Nublado"); 
-	        lista_clima.add("Lluvioso");
-	        lista_clima.add("Tormentas eléctricas "); 
-	        lista_clima.add("Ventoso"); 
-			int i = (int)Math.random()*lista_clima.size();
+			ArrayList<String> lista_climas = new ArrayList<String>();
+	        lista_climas.add("Soleado"); 
+	        lista_climas.add("Nublado"); 
+	        lista_climas.add("Lluvioso");
+	        lista_climas.add("Tormentas eléctricas "); 
+	        lista_climas.add("Ventoso"); 
+			int i = (int)Math.random()*lista_climas.size();
 			
-			return lista_clima.get(i);
-		}
+			return lista_climas.get(i);
+			}
 
 	}

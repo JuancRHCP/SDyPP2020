@@ -17,11 +17,11 @@ public class ClientR {
 			// TODO Auto-generated method stub
 			try {
 				
-				Registry crmi = LocateRegistry.getRegistry("localhost", 90);
+				Registry rmi = LocateRegistry.getRegistry("localhost", 90);
 			    System.out.println(" --- El Cliente está conectado --- ");
 				
-				RemoteI r = (RemoteI) crmi.lookup("Info_del_clima");
-				String Info_del_clima = r.getClimaS();
+				RemoteI r = (RemoteI) rmi.lookup("Info_del_clima");
+				String Info_del_clima = r.getClimaServ();
 				System.out.println(" --- El Clima en la región del servidor es: " + Info_del_clima);
 				System.out.println(" ------------- F I N A L I Z A D O --------------- ");
 				
