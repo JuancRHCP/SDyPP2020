@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Implementer implements RemoteI{
 
 		
-		public String getClimaServ() throws RemoteException {
+		public String getClimaServi() throws RemoteException {
 			
 			ArrayList<String> lista_climas = new ArrayList<String>();
 	        lista_climas.add("Soleado"); 
