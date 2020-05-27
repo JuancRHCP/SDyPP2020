@@ -1,8 +1,7 @@
-package edu.unlu.sdypp.ej2.with;
-
+package edu.unlu.sdypp.ej2.withoutsynchro;
 
 import java.io.IOException;
-
+import java.util.ArrayList;
 
 public class ClienteExtracción {
 	public static String IP_EXTRACCION = "localhost";
@@ -23,7 +22,7 @@ public class ClienteExtracción {
 		while(true) {
 			try {
 				cl.extraccion(new Double(50));
-				Thread.sleep(200);
+				Thread.sleep(1000);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

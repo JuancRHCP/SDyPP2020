@@ -1,4 +1,5 @@
-package edu.unlu.sdypp.ej2.withoutsynchronize;
+package edu.unlu.sdypp.ej2.withsynchro;
+
 
 import java.util.ArrayList;
 

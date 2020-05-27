@@ -1,4 +1,4 @@
-package edu.unlu.sdypp.ej2.withsyncronize;
+package edu.unlu.sdypp.ej2.withsynchro;
 
 
 import java.io.BufferedReader;

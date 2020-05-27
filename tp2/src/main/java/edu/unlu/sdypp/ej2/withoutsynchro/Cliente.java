@@ -1,4 +1,4 @@
-package edu.unlu.sdypp.ej2.withoutsynchronize;
+package edu.unlu.sdypp.ej2.withoutsynchro;
 
 import java.io.BufferedReader;
 import java.io.IOException;

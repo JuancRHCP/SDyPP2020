@@ -1,4 +1,4 @@
-package edu.unlu.sdypp.ej2.without;
+package edu.unlu.sdypp.ej2.withoutsynchro;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -33,15 +33,15 @@ public class ExtraccionThread implements Runnable {
 
 			BufferedReader inputChannel = new BufferedReader (new InputStreamReader (this.client.getInputStream()));
 			PrintWriter outputChannel = new PrintWriter (this.client.getOutputStream(),true);
-			log.info("Esperando extracción...");
+			log.info("--- Esperando la extracción ---");
 			String str;
 			while((str = inputChannel.readLine()) != null) {
 				Double monto = gson.fromJson(str, Double.class);
-				log.info(" [-] Nueva extracion por $" + monto );
+				log.info("--- Se ha realizado una nueva extraccion por $" + monto  + " --- " );
 				BufferedReader br;
 				br = new BufferedReader(new FileReader(filename));
 				Double saldo = new Double(br.readLine());
-				log.info(" [-] *Antes* de Extraccion -> Monto:" + monto + ", Saldo:" + saldo);
+				log.info("  --- Previo a la Extraccion, el Monto era de :" + monto + ", Saldo:" + saldo + " --- ");
 				if (saldo >= monto) {
 					saldo -= monto;
 					try {
@@ -52,17 +52,17 @@ public class ExtraccionThread implements Runnable {
 					}
 					FileWriter writer = new FileWriter(filename);
 					writer.write(String.valueOf(saldo), 0, String.valueOf(saldo).length());
-					String json = gson.toJson("Transaccion Exitosa! Saldo Actual: "+saldo);
+					String json = gson.toJson("--- La Transaccion ha sido Exitosa ---  El saldo actual es: "+saldo);
 					outputChannel.print(json);
-					log.info(" [-] Extraccion Exitosa!");
+					log.info(" --- La Extraccion ha sido Exitosa ---");
 					writer.close();
 				} else {
-					String json = gson.toJson("Transaccion Rechazada! Saldo Actual: "+saldo);
+					String json = gson.toJson("--- La transaccion ha sido rechazada --- El saldo actual es : "+saldo);
 					outputChannel.print(json);
-					log.info(" [-] Extraccion Rechazada! Saldo insuficiente!");
+					log.info("--- La extraccion ha sido rechazada --- El Saldo es insuficiente --- ");
 				}
-				log.info(" [-] *Despues* de Extraccion -> Monto:" + monto + ", Saldo:" + saldo);
-				log.info("Esperando extracción...");
+				log.info("--- Luego de la Extraccion, el monto era de :" + monto + ", Saldo:" + saldo + " --- ");
+				log.info("--- Esperando extracción ---");
 				br.close();
 			}
 	} catch (FileNotFoundException e) {
