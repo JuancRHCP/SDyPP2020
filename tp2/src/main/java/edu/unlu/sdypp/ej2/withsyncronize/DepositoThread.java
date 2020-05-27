@@ -1,4 +1,4 @@
-package edu.unlu.sdypp.ej2.with;
+package edu.unlu.sdypp.ej2.withsyncronize;
 
 
 import java.io.BufferedReader;
@@ -32,15 +32,15 @@ public class DepositoThread implements Runnable {
 
 			BufferedReader inputChannel = new BufferedReader (new InputStreamReader (this.client.getInputStream()));
 			PrintWriter outputChannel = new PrintWriter (this.client.getOutputStream(),true);
-			log.info("Esperando Deposito...");
+			log.info("--- Esperando Depósito ---");
 			String k;
 			while((k = inputChannel.readLine()) != null) {
 				Double monto = gson.fromJson(k, Double.class);
-				log.info(" [-] Nueva Deposito por $" + monto );
+				log.info(" --- El nuevo deposito es de $ " + monto  + " --- ");
 				BufferedReader br = new BufferedReader(new FileReader(filename));
 				synchronized (br) {
 					Double saldo = new Double(br.readLine());
-					log.info(" [-] *Antes* de Deposito -> Monto:" + monto + ", Saldo:" + saldo);
+					log.info(" --- Previo al Deposito, el Monto era de :" + monto + ", Saldo:" + saldo + " --- ");
 					saldo += monto;
 					try {
 						Thread.sleep(40);
@@ -50,11 +50,11 @@ public class DepositoThread implements Runnable {
 					}
 					FileWriter writer = new FileWriter(filename);
 					writer.write(String.valueOf(saldo), 0, String.valueOf(saldo).length());
-					String json = gson.toJson("Deposito Exitoso! Saldo Actual: "+saldo);
+					String json = gson.toJson("--- La Transaccion ha sido Exitosa ---  El saldo actual es:  "+saldo + " --- ");
 					outputChannel.print(json);
-					log.info(" [-] Deposito Exitoso!");
+					log.info(" --- El Deposito ha sido Exitoso ---");
 					writer.close();
-					log.info(" [-] *Despues* de Deposito -> Monto:" + monto + ", Saldo:" + saldo);
+					log.info(" --- Luego de la Extraccion, el monto era de :" + monto + ", Saldo:" + saldo + " --- ");
 					br.close();
 				}
 			}
