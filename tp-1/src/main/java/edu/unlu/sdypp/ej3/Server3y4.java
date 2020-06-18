@@ -1,39 +1,38 @@
 package edu.unlu.sdypp.ej3;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.ArrayList;
 
 public class Server3y4 {
-	int puerto;
-	private ArrayList<String> Colademensaje;
-	
-	public Server3y4 (int i) {
-		this.puerto = i;
-		this.Colademensaje =  new ArrayList<String>();
-		this.startServer();
-	}
-	
-	private void startServer() {
-		try {
-			ServerSocket ssocket = new ServerSocket (this.puerto);
-			System.out.println(" --- El servidor está en el puerto: --- " + this.puerto);
-			while (true) {
-				Socket cliente = ssocket.accept();
-				System.out.println("-- El cliente se conecto en : "+cliente.getInetAddress().getCanonicalHostName()+" : "+cliente.getPort());
-				Thread3 ts = new Thread3(cliente,  this.Colademensaje);
-				Thread tsThread = new Thread (ts);
-				tsThread.start();
-			}
-		} catch (IOException e) {
-			System.out.println(" --- El puerto está en uso ---");
-		}
-	}
-	public static void main(String[] args) {
-		Server3y4 stcp = new Server3y4(9000); 
-		//Puerto 9000
+   int port;
+   ServerSocket ss;
+   Socket cs;
+   String msg;
+   BufferedReader inputChannel;
+   PrintWriter outputChannel;
+   public Server3y4 (int port){
+      this.port = port;
+      try {
+         this.ss = new ServerSocket (this.port);
+         int counter = 0;
+         System.out.println(" -- Servidor corriendo en el puerto: "+port + " -- ");
+         while (true) {
+            this.cs = ss.accept();
+            counter++;
+            System.out.println(" -- Cliente Nro:"+counter + " -- ");
+            Thread3 ts = new Thread3 (this.cs);
+            Thread tsThread = new Thread (ts);
+            tsThread.start();
+         }
+      }catch (IOException e) {
+         System.out.println(" -- Socket en el puerto "+port+" esta siendo utilizado -- ");
+      }
+   }
 
-	}
-
+   public static void main(String[] args){
+      Server3y4 s = new Server3y4(9000);
+   }
 }
