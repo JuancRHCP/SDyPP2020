@@ -1,35 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="ej4" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="54bc5385-61c7-4f61-a81b-b309e3ea177b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../SDyPP2020" beforeDir="false" afterPath="$PROJECT_DIR$/../SDyPP2020" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtPunto2/cuentasaldo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ExtPunto2/cuentasaldo.txt" afterDir="false" />
+    <list default="true" id="54bc5385-61c7-4f61-a81b-b309e3ea177b" name="Default Changelist" comment="Ejercicios 3 y 4">
+      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tp-2/src/main/java/ar/edu/unlu/sdypp/ej4/client/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tp-2/src/main/java/ar/edu/unlu/sdypp/ej4/client/DrawBorders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tp-2/src/main/java/ar/edu/unlu/sdypp/ej4/client/Pi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tp-2/src/main/java/ar/edu/unlu/sdypp/ej4/compute/Computable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tp-2/src/main/java/ar/edu/unlu/sdypp/ej4/compute/ImplementacionComputable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tp-2/src/main/java/ar/edu/unlu/sdypp/ej4/compute/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tp-2/src/main/java/ar/edu/unlu/sdypp/ej4/compute/Tarea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tp-2/src/main/java/ar/edu/unlu/sdypp/ej4/loadbalancer/ClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tp-2/src/main/java/ar/edu/unlu/sdypp/ej4/loadbalancer/LoadBalancer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tp-2/src/main/java/ar/edu/unlu/sdypp/ej4/loadbalancer/NodeMonitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tp-2/src/main/java/ar/edu/unlu/sdypp/ej4/loadbalancer/NodeReference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tp-2/src/main/java/ar/edu/unlu/sdypp/ej4/loadbalancer/Nodo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tp-2/src/main/java/ar/edu/unlu/sdypp/ej4/loadbalancer/TaskRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tp-2/src/main/java/ar/edu/unlu/sdypp/ej4/util/ImageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../tp-2/src/main/resources/application.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej4/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej4/client/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej4/client/DrawBorders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej4/compute/Computable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej4/compute/ImplementacionComputable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej4/compute/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej4/compute/Tarea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej4/loadbalancer/ClientHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej4/loadbalancer/LoadBalancer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej4/loadbalancer/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej4/loadbalancer/NodeMonitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej4/loadbalancer/NodeReference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej4/loadbalancer/TaskRunner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej4/util/ImageUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Informe-de-Practica-2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Informe-de-Practica-2.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej2/with/Cliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej2/with/ClienteDeposito.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej2/with/ClienteExtracción.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej2/with/Clientes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej2/with/DepositoServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej2/with/DepositoThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej2/with/ExtraccionServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej2/with/ExtraccionThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej2/without/Cliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej2/without/ClienteDeposito.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej2/without/ClienteExtracción.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej2/without/Clientes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej2/without/DepositoServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej2/without/DepositoThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej2/without/ExtraccionServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/unlu/sdypp/ej2/without/ExtraccionThread.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Juan Cruz Real &lt;juancrhcp@hotmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IgnoredFileRootStore">
@@ -37,6 +63,13 @@
       <set>
         <option value="C:\Users\sofig\git\SDyPP2020\tp2\.idea" />
       </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectId" id="1cT8GOINuEZhEC3BFSKljcPWTxU" />
@@ -48,6 +81,133 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="edu.unlu.sdypp.ej4" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\GIT\SDyPP2020\tp2\src\main\resources" />
+      <recent name="C:\GIT\SDyPP2020\tp2\src\main\java\edu\unlu\sdypp" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.ClientTo8000">
+    <configuration name="ClientTo8000" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="edu.unlu.sdypp.ej4.App" />
+      <module name="src" />
+      <option name="PROGRAM_PARAMETERS" value="Client localhost 8000" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteDeposito" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.unlu.sdypp.ej2.withoutsynchro.ClienteDeposito" />
+      <module name="src" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.unlu.sdypp.ej2.withoutsynchro.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteExtracción" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.unlu.sdypp.ej2.withoutsynchro.ClienteExtracción" />
+      <module name="src" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.unlu.sdypp.ej2.withoutsynchro.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DepositoServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.unlu.sdypp.ej2.withoutsynchro.DepositoServer" />
+      <module name="src" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.unlu.sdypp.ej2.withoutsynchro.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoadBalaner8000" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="edu.unlu.sdypp.ej4.App" />
+      <module name="src" />
+      <option name="PROGRAM_PARAMETERS" value="LoadBalancer 8000" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PeerMain" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.unlu.sdypp.ej1.Peer.PeerMain" />
+      <module name="src" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.unlu.sdypp.ej1.Peer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.unlu.sdypp.ej1.Server.ServerMain" />
+      <module name="src" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.unlu.sdypp.ej1.Server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.LoadBalaner8000" />
+      <item itemvalue="Application.ClientTo8000" />
+      <item itemvalue="Application.ClienteDeposito" />
+      <item itemvalue="Application.ClienteExtracción" />
+      <item itemvalue="Application.DepositoServer" />
+      <item itemvalue="Application.PeerMain" />
+      <item itemvalue="Application.ServerMain" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PeerMain" />
+        <item itemvalue="Application.ServerMain" />
+        <item itemvalue="Application.ClienteExtracción" />
+        <item itemvalue="Application.ClienteDeposito" />
+        <item itemvalue="Application.DepositoServer" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -61,6 +221,21 @@
       <updated>1590541128657</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ejercicios 3 y 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ejercicios 3 y 4" />
   </component>
   <component name="WindowStateProjectService">
     <state x="470" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1590541141868">

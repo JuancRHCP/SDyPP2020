@@ -24,16 +24,5 @@
     <appender-ref ref="STDOUT" />
     <appender-ref ref="FILE" />
   </root>
- 
-  <logger name="ejer1" additivity="true" level="info">
-      <appender-ref ref="C:\Users\sofig\Desktop\PAW\Teoria" />
-  </logger>
-  
-  <logger name="ejer2" additivity="true" level="info">
-      <appender-ref ref="FILE" />
-  </logger>
-  
-  <logger name="ejer3" additivity="true" level="info">
-      <appender-ref ref="FILE" />
-  </logger>
+
 </configuration>
